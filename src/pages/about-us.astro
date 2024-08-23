@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout title="VIN Check">
+    <div class="max-w-screen-xl mx-auto py-12 px-6 flex flex-col lg:flex-row lg:space-x-12 space-y-8 lg:space-y-0">
+        <!-- Left Content -->
+        <div class="lg:w-2/3 w-full">
+            <h1 class="text-4xl font-bold">About Pro Vin Check</h1>
+            <p class="text-gray-700 mt-4">
+                Pro Vin Check has been providing customers with comprehensive vehicle history reports since 2012. Our aim is to reduce uncertainty and fraud in the automotive sector by empowering prospective buyers with an informed insight into a vehicle’s history.
+            </p>
+            <p class="text-gray-700 mt-4">
+                Pro Vin Check is an NMVTIS-approved (National Motor Vehicle Title Information System) data provider. NMVTIS is a national database designed to protect consumers from fraud and unsafe vehicles that prevents stolen vehicles from being resold and provides users with accurate vehicle information.
+            </p>
+            <p class="text-gray-700 mt-4">
+                The vehicle history provided by Pro Vin Check can be utilized by anyone interested in a safe purchase who wants to avoid potential hidden issues associated with purchasing a used vehicle.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8">How to perform a vehicle check with Pro Vin Check</h2>
+            <p class="text-gray-700 mt-4">
+                An Pro Vin Check check for VIN (Vehicle Identification Numbers) is available for both used vehicles and light trucks after 1980. Simply provide your unique 17-character VIN and an Pro Vin Check Report will be generated from our database of over 350 million records.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8">How to use the Pro Vin Check service</h2>
+            <p class="text-gray-700 mt-4">
+                We believe that our vehicle history report empowers consumers’ decision whether or not to buy a specific used vehicle. Pro Vin Check Reports may highlight the following information regarding a vehicle’s history:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                <li>Odometer readings;</li>
+                <li>Title information;</li>
+                <li>Junk and salvage titles;</li>
+                <li>Flood damage history;</li>
+                <li>Accident history;</li>
+            </ul>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:w-1/3 w-full lg:sticky lg:top-8">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Buying a Used car?</h3>
+                <p class="mt-2">Check it using Pro Vin Check</p>
+                <div class="mt-4">
+                    <input type="text" placeholder="Enter VIN Number" class="input input-bordered w-full rounded-lg">
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-warning w-full">Check Now <i class="fas fa-arrow-right ml-2"></i></button>
+                </div>
+                <div class="mt-4 text-sm text-gray-500">
+                    <a href="#" class="underline">No VIN yet? Get a prepaid Pro Vin Check report</a>
+                </div>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <img src="https://placehold.co/64x32" alt="Safe Checkout">
+                    <img src="https://placehold.co/64x32" alt="NIADA">
+                    <img src="https://placehold.co/64x32" alt="Blockchain Confirmed Data">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</Layout>

@@ -1,0 +1,177 @@
+---
+
+---
+
+<section class="bg-white font-sans ">
+    <div class=" text-center my-8">
+        <h1 class="text-4xl font-bold">
+            What we check for when preparing a report
+        </h1>
+        <p class="text-lg text-gray-600 mt-2">
+            carVertical is the largest online database of used vehicle records.
+            It contains more than a billion data from all over the world.
+        </p>
+        <div class="mt-4 space-x-2">
+            <button
+                onclick="showSlide(0)"
+                id="btn-damages"
+                class="carousel-btn bg-gray-200 text-gray-800 rounded-full px-4 py-2"
+            >Damages</button>
+            <button
+                onclick="showSlide(1)"
+                id="btn-mileage"
+                class="carousel-btn bg-blue-100 text-blue-800 rounded-full px-4 py-2"
+            >Mileage rollbacks</button>
+            <button
+                onclick="showSlide(2)"
+                id="btn-specs"
+                class="carousel-btn bg-gray-200 text-gray-800 rounded-full px-4 py-2"
+            >Specs & equipment</button>
+            <button
+                onclick="showSlide(3)"
+                id="btn-title"
+                class="carousel-btn bg-gray-200 text-gray-800 rounded-full px-4 py-2"
+            >Title check</button>
+            <button
+                onclick="showSlide(4)"
+                id="btn-safety"
+                class="carousel-btn bg-gray-200 text-gray-800 rounded-full px-4 py-2"
+            >Safety</button>
+            <button
+                onclick="showSlide(5)"
+                id="btn-disaster"
+                class="carousel-btn bg-gray-200 text-gray-800 rounded-full px-4 py-2"
+            >Natural disaster</button>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center ">
+        <div class="relative bg-blue-50 p-8 rounded-lg w-full max-w-4xl">
+            <div id="carousel-content ">
+                <!-- Slide 1 -->
+                <div class="carousel-slide flex flex-col items-center">
+                    <img
+                        src="https://placehold.co/400x200"
+                        alt="Graph showing damages"
+                        class="rounded-lg shadow-md"
+                    />
+                    <h2 class="text-2xl font-semibold mt-6">Damages</h2>
+                    <p class="text-gray-600 text-center mt-2">
+                        Details about damages to the vehicle.
+                    </p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide flex flex-col items-center hidden ">
+                    <img
+                        src="https://placehold.co/400x200"
+                        alt="Graph showing mileage rollback"
+                        class="rounded-lg shadow-md"
+                    />
+                    <h2 class="text-2xl font-semibold mt-6">Mileage rollbacks</h2>
+                    <p class="text-gray-600 text-center mt-2">
+                        Mileage fraud is more common than you think. You're not
+                        only overpaying for the car but also might end up with a
+                        hefty repair bill.
+                    </p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide flex flex-col items-center hidden">
+                    <img
+                        src="https://placehold.co/400x200"
+                        alt="Graph showing specs and equipment"
+                        class="rounded-lg shadow-md"
+                    />
+                    <h2 class="text-2xl font-semibold mt-6">Specs & equipment</h2>
+                    <p class="text-gray-600 text-center mt-2">
+                        Information about the vehicle's specifications and
+                        equipment.
+                    </p>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide flex flex-col items-center hidden">
+                    <img
+                        src="https://placehold.co/400x200"
+                        alt="Graph showing title check"
+                        class="rounded-lg shadow-md"
+                    />
+                    <h2 class="text-2xl font-semibold mt-6">Title check</h2>
+                    <p class="text-gray-600 text-center mt-2">
+                        Verifying the vehicle's title history.
+                    </p>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-slide flex flex-col items-center hidden">
+                    <img
+                        src="https://placehold.co/400x200"
+                        alt="Graph showing safety"
+                        class="rounded-lg shadow-md"
+                    />
+                    <h2 class="text-2xl font-semibold mt-6">Safety</h2>
+                    <p class="text-gray-600 text-center mt-2">
+                        Assessing the vehicle's safety features.
+                    </p>
+                </div>
+                <!-- Slide 6 -->
+                <div class="carousel-slide flex flex-col items-center hidden">
+                    <img
+                        src="https://placehold.co/400x200"
+                        alt="Graph showing natural disaster check"
+                        class="rounded-lg shadow-md"
+                    />
+                    <h2 class="text-2xl font-semibold mt-6">Natural disaster</h2>
+                    <p class="text-gray-600 text-center mt-2">
+                        Checking if the vehicle was affected by natural
+                        disasters.
+                    </p>
+                </div>
+            </div>
+            <button
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2"
+                onclick="prevSlide()"
+            >
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2"
+                onclick="nextSlide()"
+            >
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    const slides = document.querySelectorAll(".carousel-slide");
+    const buttons = document.querySelectorAll(".carousel-btn");
+    let currentSlide = 1;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.remove("hidden");
+                buttons[i].classList.replace("bg-gray-200", "bg-blue-100");
+                buttons[i].classList.replace("text-gray-800", "text-blue-800");
+            } else {
+                slide.classList.add("hidden");
+                buttons[i].classList.replace("bg-blue-100", "bg-gray-200");
+                buttons[i].classList.replace("text-blue-800", "text-gray-800");
+            }
+        });
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let nextSlideIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextSlideIndex);
+    }
+
+    function prevSlide() {
+        let prevSlideIndex =
+            (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevSlideIndex);
+    }
+
+    // Initialize the first slide as active
+    showSlide(currentSlide);
+</script>
