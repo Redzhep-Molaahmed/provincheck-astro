@@ -1,0 +1,20 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug("blog", slug);
+
+if (!post) {
+    throw new Error(`Post not found for slug: ${slug}`);
+}
+---
+
+<BlogLayout
+    title={post.data.title}
+    pubDate={post.data.pubDate}
+    author={post.data.author}
+    description={post.data.description}
+>
+    {post.body}
+</BlogLayout>
