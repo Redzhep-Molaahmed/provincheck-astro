@@ -1,20 +1,24 @@
 ---
-import { getCollection, getEntryBySlug } from "astro:content";
-import BlogLayout from "../../layouts/BlogLayout.astro";
+import { getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 
 const { slug } = Astro.params;
 const post = await getEntryBySlug("blog", slug);
 
 if (!post) {
-    throw new Error(`Post not found for slug: ${slug}`);
+    throw new Error(`Post not found: ${slug}`);
 }
+
+// Render the content and extract the Content component
+const { Content } = await post.render();
 ---
 
-<BlogLayout
-    title={post.data.title}
-    pubDate={post.data.pubDate}
-    author={post.data.author}
-    description={post.data.description}
->
-    {post.body}
-</BlogLayout>
+<Layout>
+    <article class="prose lg:prose-xl mx-auto">
+        <h1>{post.data.title}</h1>
+        <p class="text-gray-600">
+            {new Date(post.data.pubDate).toLocaleDateString()}
+        </p>
+        <Content />
+    </article>
+</Layout>

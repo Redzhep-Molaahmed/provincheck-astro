@@ -1,5 +1,7 @@
 ---
 
+import VinCheck from './buttonEnterVin.astro';
+
 ---
 
 <section>
@@ -23,17 +25,9 @@
             <p class="text-gray-700 mt-2">
                 Your Free VIN Check is just a click away
             </p>
-            <div class="mt-4 flex flex-col sm:flex-row">
-                <input
-                    type="text"
-                    placeholder="Enter VIN Number"
-                    class="input input-bordered w-full sm:w-auto sm:flex-grow rounded-l-lg mb-2 sm:mb-0"
-                />
-                <button
-                    class="btn btn-warning w-full sm:w-auto sm:ml-2 rounded-r-lg"
-                    >Check VIN <i class="fas fa-arrow-right ml-2"></i></button
-                >
-            </div>
+    
+            <VinCheck />
+
             <div class="mt-2 text-sm text-gray-500">
                 <a href="#" class="underline">Where to find the VIN?</a> • <a
                     href="#"

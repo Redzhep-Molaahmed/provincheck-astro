@@ -1,21 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogLayout from '../layouts/BlogLayout.astro';
 import Layout from '../layouts/Layout.astro';
-
 const posts = await getCollection('blog');
 ---
 
 
 <Layout>
     <section>
-        <h1>Blog Posts</h1>
-        <ul>
-          {posts.map((post) => (
-            <li>
-              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            </li>
-          ))}
-        </ul>
+      <h1>Blog Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li class="mb-4">
+          <a href={`/blog/${post.slug}/`} class="text-2xl text-blue-600 hover:underline">
+            {post.data.title}
+          </a>
+          <p class="text-gray-600">{post.data.description}</p>
+        </li>
+        ))}
+      </ul>
     </section>
 </Layout>

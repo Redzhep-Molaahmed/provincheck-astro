@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import VinCheck from '../components/buttonEnterVin.astro';
 ---
 
 
-<Layout title="VIN Check">
+<Layout>
     <div class="max-w-screen-xl mx-auto py-12 px-6 flex flex-col lg:flex-row lg:space-x-12 space-y-8 lg:space-y-0">
         <!-- Left Content -->
         <div class="lg:w-2/3 w-full">
@@ -41,12 +43,14 @@ import Layout from "../layouts/Layout.astro";
             <div class="bg-blue-50 p-6 rounded-lg shadow-lg">
                 <h3 class="text-xl font-bold">Buying a Used car?</h3>
                 <p class="mt-2">Check it using Pro Vin Check</p>
-                <div class="mt-4">
+                <!-- <div class="mt-4">
                     <input type="text" placeholder="Enter VIN Number" class="input input-bordered w-full rounded-lg">
                 </div>
                 <div class="mt-4">
                     <button class="btn btn-warning w-full">Check Now <i class="fas fa-arrow-right ml-2"></i></button>
                 </div>
+                 -->
+                <VinCheck />
                 <div class="mt-4 text-sm text-gray-500">
                     <a href="#" class="underline">No VIN yet? Get a prepaid Pro Vin Check report</a>
                 </div>
