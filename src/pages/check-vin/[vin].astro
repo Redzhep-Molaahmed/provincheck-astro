@@ -3,21 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import LoadingReport from "../../components/loadingReport";
 const { vin } = Astro.params;
 
-// Fetch vehicle data from the API using the VIN
-// const fetchVehicleData = async () => {
-//     const apiUrl = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinextended/${vin}?format=json`;
-//     const response = await fetch(apiUrl);
-//     const data = await response.json();
-//     return data.Results; // Access the Results array from the response
-// };
-
-// // Call fetchVehicleData on page load and map the data to the HTML
-// let vehicleData = await fetchVehicleData();
-// let make = vehicleData.find((item) => item.Variable === "Make")?.Value || "N/A";
-// let trim =  vehicleData.find((item) => item.Variable === "Trim")?.Value || "N/A";
-// let model = vehicleData.find((item) => item.Variable === "Model")?.Value || "N/A";
-// let modelYear = vehicleData.find((item) => item.Variable === "Model Year")?.Value || "N/A";
-// let plantCountry = vehicleData.find((item) => item.Variable === "Plant Country")?.Value || "N/A";
 ---
 
 <Layout>

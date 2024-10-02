@@ -1,6 +1,17 @@
 ---
+import { getCollection } from "astro:content";
 import { getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  // Get all blog entries
+  const posts = await getCollection('blog');
+  
+  // Return a list of paths for Astro to generate
+  return posts.map(post => ({
+    params: { slug: post.slug }
+  }));
+}
 
 const { slug } = Astro.params;
 const post = await getEntryBySlug("blog", slug);
