@@ -33,7 +33,7 @@ const VehicleReport = ({ vin, vehicleData, error }) => {
           {/* Info Section */}
           <div className="mt-6 sm:mt-0 sm:ml-6 text-center sm:text-left">
             <h2 className="text-xl font-bold text-gray-800">
-              {vehicleData.modelYear} {vehicleData.make} {vehicleData.trim}
+              {vehicleData.modelYear !== "N/A" && vehicleData.modelYear} {vehicleData.make !== "N/A" && vehicleData.make} {vehicleData.trim !== "N/A" && vehicleData.trim}
             </h2>
             <ul className="text-left text-sm mt-2 text-gray-600 space-y-1">
               {[
