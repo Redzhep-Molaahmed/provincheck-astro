@@ -6,7 +6,7 @@ const { slug } = Astro.params;
 const post = await getEntryBySlug("blog", slug);
 
 if (!post) {
-    throw new Error(`Post not found: ${slug}`);
+  throw new Error(`Post not found: ${slug}`);
 }
 
 // Render the content and extract the Content component
@@ -14,11 +14,37 @@ const { Content } = await post.render();
 ---
 
 <Layout>
-    <article class="prose lg:prose-xl mx-auto">
-        <h1>{post.data.title}</h1>
-        <p class="text-gray-600">
-            {new Date(post.data.pubDate).toLocaleDateString()}
+  <article class="max-w-3xl mx-auto mt-10">
+    <!-- Post Header -->
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">{post.data.title}</h1>
+      <div class="flex items-center text-gray-600">
+        <p>
+          {new Date(post.data.pubDate).toLocaleDateString(undefined, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
         </p>
-        <Content />
-    </article>
+        {post.data.author && (
+          <>
+            <span class="mx-2">•</span>
+            <p>By {post.data.author}</p>
+          </>
+        )}
+      </div>
+      {post.data.image && (
+        <img
+          src={post.data.image}
+          alt={post.data.title}
+          class="mt-6 w-full object-cover rounded-lg"
+        />
+      )}
+    </header>
+
+    <!-- Post Content -->
+    <div class="prose lg:prose-xl mx-auto">
+      <Content />
+    </div>
+  </article>
 </Layout>

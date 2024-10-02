@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+const { title, description, imageUrl } = Astro.props;
+---
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+<!-- <Image src="../assets/blog.webp" alt={title} inferSize={true} /> -->
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{title}</div>
+    <p class="text-gray-700 text-base">
+      {description}
+    </p>
+  </div>
+</div>

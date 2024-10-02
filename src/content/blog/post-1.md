@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "Discover how VIN checks can significantly impact insurance claims and coverage."
 author: "ProVinCheck Team"
 tags: ["VIN", "Insurance", "Vehicle History", "Claims", "Coverage"]
-image: "/images/vin-checks-insurance.jpg"
+image: "src/assets/images/blog/blog.webp"
 ---
 
 # Unveiling the Power of VIN Checks in Insurance Claims and Coverage

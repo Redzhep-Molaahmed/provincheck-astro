@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "A comprehensive guide on identifying cloned or counterfeit VINs when purchasing a vehicle."
 author: "ProVinCheck Team"
 tags: ["VIN", "Vehicle Identification Number", "Cloned VIN", "Counterfeit VIN", "Vehicle Fraud"]
-image: "/images/cloned-vin-counterfeit.jpg"
+image: "/blog/blog.webp"
 ---
 
 # How to Spot Cloned VIN or Counterfeit VIN Numbers

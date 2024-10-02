@@ -10,6 +10,6 @@ export default {
 		daisyui
 	],
 	daisyui: {
-		themes: ["light", "dark"], // Enable daisyUI themes
+		themes: ["light"], // Enable daisyUI themes
 	},
 }
