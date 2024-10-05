@@ -4,11 +4,29 @@ import ChooseWiselySection from "../components/ChooseWiselySection.astro";
 import FactsDataSection from "../components/FactsDataSection.astro";
 import VinCheckSection from "../components/VinCheckSection.astro";
 import CarouselSection from "../components/CarouselSection.astro";
+import { getLocation } from '../utils/geo';
+
+export async function getStaticProps({ request }) {
+  const ip = request.headers.get('x-forwarded-for') || request.connection.remoteAddress;
+  const countryCode = await getLocation(ip);
+
+  return {
+    props: { countryCode },
+  };
+}
+
+const { countryCode } = Astro.props;
 ---
 
 <Layout title="VIN Check">
-    <VinCheckSection />
-    <FactsDataSection />
-    <ChooseWiselySection />
-    <CarouselSection  />
+  <VinCheckSection />
+  <FactsDataSection />
+  <ChooseWiselySection />
+  <CarouselSection />
+
+  {countryCode === 'US' ? (
+    <h1>Welcome to the US Landing Page</h1>
+  ) : (
+    <h1>Welcome to the Europe Landing Page</h1>
+  )}
 </Layout>
