@@ -4,19 +4,7 @@ import ChooseWiselySection from "../components/ChooseWiselySection.astro";
 import FactsDataSection from "../components/FactsDataSection.astro";
 import VinCheckSection from "../components/VinCheckSection.astro";
 import CarouselSection from "../components/CarouselSection.astro";
-import { getLocation } from '../utils/geo';
 
-export const prerender = false; // Disable static rendering to enable SSR
-
-const { request } = Astro;
-let location = {};
-
-try {
-  const ip = request.headers.get('x-forwarded-for') || request.socket.remoteAddress;
-  location = await getLocation(ip);
-} catch (error) {
-  console.error('Error fetching location:', error);
-}
 ---
 
 <Layout title="VIN Check">
@@ -24,6 +12,4 @@ try {
   <FactsDataSection />
   <ChooseWiselySection />
   <CarouselSection />
-
-  <p>Country code: {location.country || 'Unknown'}</p>
 </Layout>
