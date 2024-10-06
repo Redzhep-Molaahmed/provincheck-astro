@@ -24,9 +24,5 @@ const { countryCode } = Astro.props;
   <ChooseWiselySection />
   <CarouselSection />
 
-  {countryCode === 'US' ? (
-    <h1>Welcome to the US Landing Page</h1>
-  ) : (
-    <h1>Welcome to the Europe Landing Page</h1>
-  )}
+  <p>Country code: {countryCode}</p>
 </Layout>
