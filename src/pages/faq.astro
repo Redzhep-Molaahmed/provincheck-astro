@@ -1,0 +1,196 @@
+---
+import VinEnterCard from "../components/vinEnterCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <div
+        class="max-w-screen-xl mx-auto py-12 px-6 flex flex-col lg:flex-row lg:space-x-12 space-y-8 lg:space-y-0 sticky-stopper"
+    >
+        <div class="lg:w-2/3 w-full">
+            <h2 class="text-2xl font-bold mb-6 text-center">
+                Frequently Asked Questions
+            </h2>
+
+            <!-- FAQ Item 1 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(1)"
+                >
+                    <p class="text-lg font-semibold">How to Get Started?</p>
+                    <span id="icon-1" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-1" class="hidden mt-4 text-gray-600">
+                    <p>
+                        To get started, simply sign up for an account, log in,
+                        and begin using our services to check your VIN.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(2)"
+                >
+                    <p class="text-lg font-semibold">
+                        I Can’t Log In To My Account. I Forgot the Password or
+                        Want to Change it.
+                    </p>
+                    <span id="icon-2" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-2" class="hidden mt-4 text-gray-600">
+                    <p>
+                        If you forgot your password, you can reset it using the
+                        “Forgot Password” option on the login page.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(3)"
+                >
+                    <p class="text-lg font-semibold">
+                        How Can I Access My EpicVIN Vehicle History Report?
+                    </p>
+                    <span id="icon-3" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-3" class="hidden mt-4 text-gray-600">
+                    <p>
+                        You can access your EpicVIN vehicle history report by
+                        entering your VIN number in the search bar and clicking
+                        “Check Now”.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(4)"
+                >
+                    <p class="text-lg font-semibold">
+                        What Is A Prepaid Report?
+                    </p>
+                    <span id="icon-4" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-4" class="hidden mt-4 text-gray-600">
+                    <p>
+                        A prepaid report allows you to purchase a package and
+                        redeem reports without paying each time.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(5)"
+                >
+                    <p class="text-lg font-semibold">
+                        I Ordered A Package and Have 4 Prepaid Reports. I’m
+                        Trying To Check My VIN, but It Still Asks Me to Pay.
+                        Why?
+                    </p>
+                    <span id="icon-5" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-5" class="hidden mt-4 text-gray-600">
+                    <p>
+                        If you are asked to pay, ensure that your prepaid
+                        reports are still valid. Contact customer support if the
+                        issue persists.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(6)"
+                >
+                    <p class="text-lg font-semibold">
+                        How to Use Prepaid Reports?
+                    </p>
+                    <span id="icon-6" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-6" class="hidden mt-4 text-gray-600">
+                    <p>
+                        Once you have a prepaid report, simply enter your VIN
+                        and the system will automatically deduct a report from
+                        your balance.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="border-b border-gray-300 py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(7)"
+                >
+                    <p class="text-lg font-semibold">
+                        What Information Can I Find in Your Report?
+                    </p>
+                    <span id="icon-7" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-7" class="hidden mt-4 text-gray-600">
+                    <p>
+                        Our reports include detailed vehicle history, including
+                        accidents, ownership, mileage, and more.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="py-4">
+                <div
+                    class="flex justify-between items-center cursor-pointer"
+                    onclick="toggleFAQ(8)"
+                >
+                    <p class="text-lg font-semibold">
+                        Do You Have an Official Source of Information for Your
+                        Reports?
+                    </p>
+                    <span id="icon-8" class="text-xl font-bold">+</span>
+                </div>
+                <div id="faq-answer-8" class="hidden mt-4 text-gray-600">
+                    <p>
+                        Yes, we use official government databases and trusted
+                        third-party sources to gather information for our
+                        reports.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content with sticky behavior -->
+        <div class="lg:w-1/3 w-full">
+            <div class="sticky top-8">
+                <VinEnterCard />
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script defer>
+    function toggleFAQ(index) {
+        const faqAnswer = document.getElementById(`faq-answer-${index}`);
+        const icon = document.getElementById(`icon-${index}`);
+
+        if (faqAnswer.classList.contains('hidden')) {
+            faqAnswer.classList.remove('hidden');
+            icon.innerHTML = '-';
+        } else {
+            faqAnswer.classList.add('hidden');
+            icon.innerHTML = '+';
+        }
+    }
+</script>

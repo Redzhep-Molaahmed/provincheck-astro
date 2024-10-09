@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+<!-- Top section with the title and image -->
+<div class="bg-blue-200 py-10 px-4 md:px-8">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        <div class="text-center md:text-left">
+            <h1 class="text-4xl font-bold text-gray-900">Contact us</h1>
+            <p class="text-lg text-gray-700 mt-4">Do you have questions concerning our product, your order, or a general matter? Tell us how we can help you.</p>
+        </div>
+        <div class="flex justify-center md:justify-end">
+            <img src="https://placehold.co/250x150" alt="Car illustration" class="h-40 w-auto">
+        </div>
+    </div>
+</div>
+
+<!-- Contact form section -->
+<div class="container mx-auto py-10 px-4 md:px-8">
+    <h2 class="text-2xl font-bold text-gray-900 text-center mb-6">Fill this form and your request will be answered as soon as possible</h2>
+
+    <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left column (Email, Subject, VIN) -->
+            <div class="space-y-6">
+                <!-- Email input -->
+                <div class="flex flex-col">
+                    <label for="email" class="mb-2 font-semibold text-gray-700">Your e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" class="border border-gray-300 p-3 rounded-md focus:ring focus:ring-blue-200">
+                </div>
+
+                <!-- Subject input -->
+                <div class="flex flex-col">
+                    <label for="subject" class="mb-2 font-semibold text-gray-700">Subject</label>
+                    <select id="subject" name="subject" class="border border-gray-300 p-3 rounded-md focus:ring focus:ring-blue-200">
+                        <option>Other</option>
+                        <option>Product Inquiry</option>
+                        <option>Order Issue</option>
+                        <option>General Question</option>
+                    </select>
+                </div>
+
+                <!-- VIN input -->
+                <div class="flex flex-col">
+                    <label for="vin" class="mb-2 font-semibold text-gray-700">VIN number of the car you checked</label>
+                    <input type="text" id="vin" name="vin" placeholder="1WBN7A35CXXXXX" class="border border-gray-300 p-3 rounded-md focus:ring focus:ring-blue-200">
+                </div>
+            </div>
+
+            <!-- Right column (Message) -->
+            <div class="flex flex-col">
+                <label for="message" class="mb-2 font-semibold text-gray-700">Your message</label>
+                <textarea id="message" name="message" rows="8" placeholder="Enter your message here..." class="border border-gray-300 p-3 rounded-md focus:ring focus:ring-blue-200"></textarea>
+            </div>
+        </div>
+
+        <!-- Checkbox and Privacy Policy -->
+        <div class="flex items-center">
+            <input type="checkbox" id="privacy" name="privacy" class="mr-2">
+            <label for="privacy" class="text-gray-600">
+                I have read, understand and accept the content of the <a href="#" class="text-blue-600 underline">Privacy Policy</a> and consent to the processing of my data as part of this application.
+            </label>
+        </div>
+
+        <!-- Submit Button (left aligned and wider) -->
+        <div class="flex justify-start">
+            <button type="submit" class="w-1/3 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-3 px-6 rounded-full transition duration-200">
+                Send
+            </button>
+        </div>
+    </form>
+</div>
+    
+</Layout>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import VehicleReport from './vehicleReport.jsx'; // Import the VehicleReport component
+import VehicleReport from './decoder/vehicleReportMHTSA.jsx'; // Import the VehicleReport component
 
 const LoadingReport = ({ vin }) => {
     const [progress, setProgress] = useState(0);

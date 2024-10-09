@@ -1,11 +1,12 @@
 import React from 'react';
 
-const VehicleReport = ({ vin, vehicleData, error }) => {
+const VehicleReportMHTSA = ({ vin, vehicleData, error }) => {
   if (error) {
     return <div>Error: {error}</div>;
   }
 
   return (
+    
     <div className="max-w-5xl mx-auto py-10">
       {/* Header Section */}
       <div className="bg-white shadow-md rounded-lg p-6">
@@ -23,10 +24,13 @@ const VehicleReport = ({ vin, vehicleData, error }) => {
         <div className="bg-blue-50 rounded-lg shadow-md p-6 mt-6 flex flex-col sm:flex-row items-center justify-between">
           {/* Image and Logo */}
           <div className="flex items-center">
+            
             <img
-              src="https://via.placeholder.com/150x200"
-              alt="Vehicle"
-              className="rounded-lg"
+                src={`/src/assets/optimized/${vehicleData.make.toLowerCase()}.png`}
+                alt="Vehicle"
+                height={200}
+                width={200}
+                className="rounded-lg"
             />
           </div>
 
@@ -203,4 +207,4 @@ const VehicleReport = ({ vin, vehicleData, error }) => {
   );
 };
 
-export default VehicleReport;
+export default VehicleReportMHTSA;

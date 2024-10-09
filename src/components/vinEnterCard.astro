@@ -1,0 +1,39 @@
+<div class="flex justify-center items-center ">
+    <div class="bg-blue-50 rounded-lg p-8 w-full max-w-md text-center">
+        <h1 class="text-2xl font-bold text-blue-600">Buying a Used car?</h1>
+        <p class="text-xl font-bold text-gray-900 mt-2">
+            Check it by PRO VIN CHECK
+        </p>
+        <form
+            onsubmit="event.preventDefault(); window.location.href='/check-vin/' + this.vin.value;"
+        >
+            <div class="mt-6">
+                <input
+                    type="text"
+                    name="vin"
+                    placeholder="Enter VIN Number"
+                    class="w-full px-4 py-3 text-lg rounded-full border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
+                />
+            </div>
+
+            <button
+                class="mt-4 w-full bg-orange-500 text-white py-3 rounded-full flex items-center justify-center text-lg font-semibold hover:bg-orange-600 transition"
+            >
+                Check Now
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </form>
+
+        <div class="mt-4 text-sm text-gray-500">
+            <a href="#" class="underline">No VIN yet? Get a prepaid Pro Vin Check report</a>
+        </div>
+        <div class="flex justify-center mt-6 space-x-4">
+            <img src="https://placehold.co/64x32" alt="Safe Checkout" />
+            <img src="https://placehold.co/64x32" alt="NIADA" />
+            <img
+                src="https://placehold.co/64x32"
+                alt="Blockchain Confirmed Data"
+            />
+        </div>
+    </div>
+</div>

@@ -1,10 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import LoadingReport from "../../components/loadingReport";
+import DecoderLanding from "../../components/decoder/decoderLanding";
 const { vin } = Astro.params;
 
 ---
 
 <Layout>
-    <LoadingReport vin={vin}  client:load/>
+    <DecoderLanding vin={vin} client:load />
 </Layout>
