@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-const { title, description, imageUrl } = Astro.props;
+const { title, description, imageUrl , slug} = Astro.props;
 ---
 
 <div class="max-w-sm rounded overflow-hidden shadow-lg">
 <!-- <Image src="../assets/blog.webp" alt={title} inferSize={true} /> -->
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">{title}</div>
+    <a href={`/blog/${slug}`} class="font-bold text-xl mb-2">{title}</a>
     <p class="text-gray-700 text-base">
       {description}
     </p>

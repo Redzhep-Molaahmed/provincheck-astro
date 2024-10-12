@@ -27,6 +27,18 @@ export const fetchVehicleData = async (vin) => {
         fuelTypePrimary: data.Results.find((item) => item.Variable === 'Fuel Type - Primary')?.Value || 'N/A',
         engineBrakeHP: data.Results.find((item) => item.Variable === 'Engine Brake (hp) From')?.Value || 'N/A',
       };
+
+
+       // Check how many fields are 'N/A'
+       const naCount = Object.values(vehicleDetails).filter(value => value === 'N/A').length;
+       const totalFields = Object.keys(vehicleDetails).length;
+       
+       // If 90% or more fields are 'N/A', fetch data from a different endpoint
+       const naPercentage = (naCount / totalFields) * 100;
+
+        if (naPercentage >= 90) {
+          throw new Error('Data not found');
+        }
   
       return { vehicleDetails, error: null }; // Return data instead of setting state directly
     } catch (err) {

@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "Learn how VIN checks can help you verify vehicle specifications and features."
 author: "ProVinCheck Team"
 tags: ["VIN", "Vehicle Specifications", "Car Buying", "VIN Checks", "Vehicle History"]
-image: "/blog/blog.webp"
+image: ""
 ---
 
 # Using VIN Checks to Verify Vehicle Specifications and Features

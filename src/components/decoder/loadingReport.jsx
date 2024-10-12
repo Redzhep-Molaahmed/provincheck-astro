@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const LoadingReport = ({ vin, state }) => {
+const LoadingReport = ({ vin, onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [seconds, setSeconds] = useState(20);
   const [statusMessage, setStatusMessage] = useState('Searching for available information');
@@ -25,7 +25,8 @@ const LoadingReport = ({ vin, state }) => {
     } else if (progress === 100) {
       setStatusMessage('Decoding complete!');
       // Call onComplete when progress reaches 100%
-    }
+      onComplete();
+    } 
   }, [progress]);
 
   return (

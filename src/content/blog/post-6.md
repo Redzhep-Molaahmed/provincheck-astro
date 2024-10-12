@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "Learn how to protect yourself from vehicle fraud with comprehensive VIN check best practices."
 author: "ProVinCheck Team"
 tags: ["VIN", "Vehicle Fraud", "Vehicle History", "Car Buying", "VIN Checks"]
-image: "/blog/blog.webp"
+image: ""
 ---
 
 # Protecting Yourself from Vehicle Fraud: VIN Check Best Practices

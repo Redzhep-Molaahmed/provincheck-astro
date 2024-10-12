@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "Discover how VIN checks can safeguard buyers in online car auctions."
 author: "ProVinCheck Team"
 tags: ["VIN", "Online Car Auctions", "Vehicle History", "Car Buying", "VIN Checks"]
-image: "/blog/blog.webp"
+image: ""
 ---
 
 # Unveiling the Power of VIN Checks in Online Car Auctions

@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "Learn about the common red flags to watch for in a vehicle's VIN history report when purchasing a used car."
 author: "ProVinCheck Team"
 tags: ["VIN", "Vehicle History", "Used Cars", "Car Buying", "Red Flags"]
-image: "/blog/blog.webp"
+image: ""
 ---
 
 # Common Red Flags to Look for in a Vehicle VIN History Report

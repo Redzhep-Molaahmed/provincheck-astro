@@ -4,7 +4,7 @@ pubDate: "2024/09/26"
 description: "Discover how VIN checks can enhance buyer confidence and revolutionize the selling of used cars."
 author: "ProVinCheck Team"
 tags: ["VIN", "Used Cars", "Buyer Confidence", "Vehicle History", "Car Sales"]
-image: "/blog/blog.webp"
+image: ""
 ---
 
 # Boosting Buyer Confidence: How VIN Checks Revolutionize the Selling of Used Cars
