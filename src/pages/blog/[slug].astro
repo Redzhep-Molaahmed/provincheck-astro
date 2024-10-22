@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
+export const prerender = true;
 export async function getStaticPaths() {
   // Get all blog entries
   const posts = await getCollection('blog');
