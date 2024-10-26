@@ -1,17 +1,74 @@
 ---
-
 ---
-
-<form onsubmit="event.preventDefault(); window.location.href='/check-vin/' + this.vin.value;">
+<form
+  onsubmit="event.preventDefault(); window.location.href='/check-vin/' + this.vin.value;"
+>
   <div class="mt-4 flex flex-col sm:flex-row">
-    <input
-      type="text"
-      name="vin"
-      placeholder="Enter VIN Number"
-      class="input input-bordered w-full sm:w-auto sm:flex-grow rounded-l-lg mb-2 sm:mb-0"
-    />
-    <button class="btn btn-warning w-full sm:w-auto sm:ml-2 rounded-r-lg">
-      Check VIN <i class="fas fa-arrow-right ml-2"></i>
+    <div class="relative w-full sm:flex-grow mb-2 sm:mb-0">
+      <input
+        type="text"
+        name="vin"
+        placeholder="Enter VIN Number"
+        class="input input-bordered w-full sm:flex-grow rounded-l-lg"
+      />
+      <svg
+        class="absolute right-0 top-0 mt-2 mr-2 h-8 w-8 text-black-900"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        onclick="document.getElementById('my_modal_3').showModal();"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        ></path>
+      </svg>
+
+      <dialog id="my_modal_3" class="modal">
+        <div class="modal-box w-12/12 max-w-5xl">
+          <button
+        type="button"
+        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+        onclick="document.getElementById('my_modal_3').close();"
+          >✕</button>
+          <h1 class="text-lg font-bold">Vehicle Identification Number (VIN)</h1>
+        
+          <p class="mt-2">A <strong>VIN (Vehicle Identification Number)</strong> is a unique 17-character code identifying any car or model. The VIN consists of alphanumeric characters using the following set: <code>1 2 3 4 5 6 7 8 9 0 A B C D E F G H J K L M N P R S T U V W X Y Z</code>. The letters O, I, and Q are omitted to avoid confusion with similar-looking numbers, 0, 1, and 9.</p>
+        
+            <img
+              src="https://placehold.co/500x500"
+              alt="EpicVIN logo"
+            />
+
+          <p class="mt-2">All information about a car, such as production date, mileage rollbacks, accidents, recalls, thefts, and maintenance history, is recorded in various registries and databases using its VIN.</p>
+          
+          <h2 class="mt-4 text-md font-semibold">Where Can I Find the VIN Number?</h2>
+          
+          <p class="mt-2">If you are buying a car, ask the seller to provide the VIN number. If you already have the car or are inspecting it, you can locate the VIN number in several places:</p>
+          
+          <ul class="list-disc list-inside mt-2">
+          <li>On the front of the dashboard on the driver's side</li>
+          <li>Under the hood (engine block)</li>
+          <li>Driver’s side interior dash</li>
+          <li>Door frame (left-hand inner wheel arch)</li>
+          <li>Driver’s side door (near door jamb)</li>
+          <li>In vehicle documents: registration certificate, vehicle title, insurance certificate, and owner’s manual</li>
+          </ul>
+
+
+
+          <img
+          src="https://placehold.co/500x500"
+          alt="EpicVIN logo"
+          
+         />
+        </div>
+      </dialog>
+    </div>
+    <button type="submit" class="btn btn-warning w-full sm:w-auto sm:ml-2 rounded-r-lg">
+      Check VIN<i class="fas fa-arrow-right ml-2"></i>
     </button>
   </div>
 </form>
